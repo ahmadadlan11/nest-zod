@@ -1,4 +1,4 @@
-import { Status } from 'generated/prisma';
+import { Status } from '@prisma/client';
 import { citySchema } from 'src/schema/city';
 import { z } from 'zod';
 
