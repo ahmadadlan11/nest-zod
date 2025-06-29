@@ -1,22 +1,64 @@
-NestJS Interview Challenge
+# 💼 NestJS Interview Challenge
 
+## 🧩 Problem Statement
 
-📌 Problem Statement:
+You're building a backend system for a platform that manages **users**, their **cities**, and **regions**. The data for users, regions, and cities will be provided to you in JSON or CSV format. Your task is to create a clean and scalable NestJS backend that follows best practices.
 
-Carefully review the provided codebase.
+---
 
+## 🛠️ Tasks
 
-🎯 Objectives:
+1. **Set Up the Project**
+   - Create a new NestJS project using the Nest CLI.
+   - Set up TypeORM or Prisma (choose one).
+   - Use PostgreSQL (or SQLite for simplicity) as the database.
 
-Implement full CRUD functionality for Cities and Countries APIs, adhering strictly to the existing code style and structure.
+2. **Create Entity Modules**
+   - `User` module: Users should have fields like `id`, `name`, `email`, `region`, and `city`.
+   - `City` module: Cities belong to regions.
+   - `Region` module: A region can contain multiple cities.
+   - Define appropriate relationships between these entities (e.g., OneToMany, ManyToOne).
 
+3. **Implement RESTful APIs**
+   - CRUD for each module (`/users`, `/regions`, `/cities`).
+   - Include filtering and pagination where applicable (especially for listing users and cities).
 
-Create new modules for:
+4. **Data Seeding**
+   - You will be given files with the data for users, cities, and regions.
+   - Write a script or service to seed the database from these files.
+   - Ensure that relational integrity is maintained (e.g., users are assigned valid city/region IDs).
 
-Regions
-Users (including authentication support)
+5. **Validation & Error Handling**
+   - Add proper validation (e.g., DTOs with `class-validator`) on all input data.
+   - Handle common errors (e.g., duplicate entries, not found, bad requests).
 
-In the root/data directory, you will find two files containing city and region data. Devise an efficient method to seed the database with this data.
+6. **Bonus Points (Optional but Appreciated)**
+   - Add authentication for users (basic JWT login is enough).
+   - Add Swagger documentation for the API.
+   - Use Docker for containerized setup.
+   - Add tests for at least one module (unit or e2e using Jest).
+
+---
+
+## 📂 Provided Files
+
+You will receive the following:
+- `users.json`
+- `cities.json`
+- `regions.json`
+
+Use these for your database seed logic.
+
+---
+
+## ✅ What We're Looking For
+
+- Clear and scalable project structure
+- Code readability and proper use of NestJS conventions
+- Correct use of relationships between entities
+- Proper API design and error handling
+- Optional features and documentation are a plus!
+
 
 🌟 Bonus Challenge (Extra Points):
 
